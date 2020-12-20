@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import _ from 'lodash';
-import music from '../images/music.jpeg';
+import music from '../images/music (1).jpeg';
 const PlayList = ({ playlist }) => {
   return (
     <div>

@@ -1,14 +1,15 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from '../components/Home';
-import Redirect from '../components/Redirect';
+import RedirectPage from '../components/Redirect';
 import Dashboard from '../components/Dashboard';
-import NotFound from '../components/NotFound';
+import NotFoundPage from '../components/NotFound';
 
 class AppRouter extends React.Component {
   state = {
     expiryTime: '0'
   };
+
   componentDidMount() {
     let expiryTime;
     try {
@@ -18,28 +19,53 @@ class AppRouter extends React.Component {
     }
     this.setState({ expiryTime });
   }
+
   setExpiryTime = (expiryTime) => {
     this.setState({ expiryTime });
   };
+
   isValidSession = () => {
     const currentTime = new Date().getTime();
     const expiryTime = this.state.expiryTime;
     const isSessionValid = currentTime < expiryTime;
+
     return isSessionValid;
   };
+
   render() {
     return (
       <BrowserRouter>
         <div className="main">
           <Switch>
-            <Route path="/" component={Home} exact={true} />
-            <Route path="/redirect" component={Redirect} />
-            <Route path="/dashboard" component={Dashboard} />
-            <Route component={NotFound} />
+            <Route
+              path="/"
+              exact={true}
+              render={(props) => (
+                <Home isValidSession={this.isValidSession} {...props} />
+              )}
+            />
+            <Route
+              path="/redirect"
+              render={(props) => (
+                <RedirectPage
+                  isValidSession={this.isValidSession}
+                  setExpiryTime={this.setExpiryTime}
+                  {...props}
+                />
+              )}
+            />
+            <Route
+              path="/dashboard"
+              render={(props) => (
+                <Dashboard isValidSession={this.isValidSession} {...props} />
+              )}
+            />
+            <Route component={NotFoundPage} />
           </Switch>
         </div>
       </BrowserRouter>
     );
   }
 }
+
 export default AppRouter;
