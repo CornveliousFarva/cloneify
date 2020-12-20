@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/cloneify/static/css/main.4db3e50e.chunk.css",
+    "main.js": "/cloneify/static/js/main.847af407.chunk.js",
+    "main.js.map": "/cloneify/static/js/main.847af407.chunk.js.map",
+    "runtime-main.js": "/cloneify/static/js/runtime-main.78308cd6.js",
+    "runtime-main.js.map": "/cloneify/static/js/runtime-main.78308cd6.js.map",
+    "static/css/2.20aa2d7b.chunk.css": "/cloneify/static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.67b76c2c.chunk.js": "/cloneify/static/js/2.67b76c2c.chunk.js",
+    "static/js/2.67b76c2c.chunk.js.map": "/cloneify/static/js/2.67b76c2c.chunk.js.map",
+    "index.html": "/cloneify/index.html",
+    "static/css/2.20aa2d7b.chunk.css.map": "/cloneify/static/css/2.20aa2d7b.chunk.css.map",
+    "static/css/main.4db3e50e.chunk.css.map": "/cloneify/static/css/main.4db3e50e.chunk.css.map",
+    "static/js/2.67b76c2c.chunk.js.LICENSE.txt": "/cloneify/static/js/2.67b76c2c.chunk.js.LICENSE.txt",
+    "static/media/music (1).b2fe7d4d.jpeg": "/cloneify/static/media/music (1).b2fe7d4d.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.78308cd6.js",
+    "static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.67b76c2c.chunk.js",
+    "static/css/main.4db3e50e.chunk.css",
+    "static/js/main.847af407.chunk.js"
+  ]
+}
